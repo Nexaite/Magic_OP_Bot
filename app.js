@@ -14,9 +14,8 @@ client.on('ready', (err) => {
 
 client.on('messageCreate', (message) => {
     if(message.author.bot) return
-    if(message.content.includes('magic')) message.channel.send('Magic OP')
+    if(message.content.toLowerCase().includes('magic')) message.channel.send('Magic OP')
 })
 
 //Make the client login and start
-
 client.login(process.env.TOKEN)
